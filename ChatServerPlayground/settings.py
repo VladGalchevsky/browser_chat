@@ -26,6 +26,9 @@ SECRET_KEY = 'django-insecure-_4emx0s4m*#h*ubb_l4b%iz5_-c=#8_f7x-7_9c0*ct+i2ane8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'account.Account'
@@ -154,6 +157,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 TEMP = os.path.join(BASE_DIR, 'media_cdn/temp')
 
 BASE_DIR = 'http://127.0.0.1:8000'
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10mb = 10 * 1024 *1024
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
