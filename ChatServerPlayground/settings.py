@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     # my apps
     'personal',
     'account',
+    'friend',
 
-    # third party apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -8,13 +8,12 @@ import os
 import cv2
 import json
 import base64
-import requests
 from django.core import files
 
 from account.forms import AccountAuthenticationForm, AccountUpdateForm, RegistrationForm
 from account.models import Account
-from friend.utils import get_friend_request_or_false
-from friend.friend_request_status import FriendRequestStatus
+# from friend.utils import get_friend_request_or_false
+# from friend.friend_request_status import FriendRequestStatus
 from friend.models import FriendList, FriendRequest
 
 TEMP_PROFILE_IMAGE_NAME = 'temp_profile_image.png'
