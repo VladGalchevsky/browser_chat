@@ -35,9 +35,10 @@ urlpatterns = [
     path('', home_screen_view, name='home'),
     path('account/', include('account.urls', namespace='account')),
     path('admin/', admin.site.urls),
-    path('register/', register_view, name='register'),
+    path('friend/', include('friend.urls', namespace='friend')),
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
+    path('register/', register_view, name='register'),
     path('search/', account_search_view, name='search'),
 
     # Password reset links (ref: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
