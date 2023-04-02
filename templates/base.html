@@ -4,13 +4,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Easy Chat</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+  <!-- Cropperjs -->
   <link rel="stylesheet" href="{% static 'cropperjs/dist/cropper.min.css' %}">
+
 </head>
 
 <body>
@@ -47,20 +49,24 @@
   {% include 'inc/footer.html' %}
   <!-- end footer -->
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
   <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script type="module" src="{% static 'cropperjs/dist/cropper.min.js' %}"></script>
 
   <script type="text/javascript">
     function displayLoadingSpinner(isDisplayed) {
-      var spinner = document.getElementById('id_loading_spinner')
+      var spinner = document.getElementById("id_loading_spinner")
       if (isDisplayed) {
-        spinner.style.display = 'block'
+        spinner.style.display = "block"
       }
       else {
-        spinner.style.display = 'none'
+        spinner.style.display = "none"
       }
     }
   </script>
+
 </body>
 
 </html>
